@@ -1,28 +1,26 @@
 <template>
   <div>
+    
     <Header/>
-    <!-- 内容占位组件 -->
+
+    <!-- 内容占位符 -->
     <nuxt />
-    <Footer/>
+
   </div>
 </template>
 
 <script>
-// 导入头部组件
-import Header from "@/components/header"
-// 导入页脚组件
-import Footer from "@/components/footer";
-export default {
-  // 注册组件
-  components: {
-    Header,
-    Footer,
+import Header from "@/components/header.vue";
 
-  }
+export default {
+  components: {
+    Header
+  }  
 }
 </script>
 
-<style lang="less">
+
+<style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -35,21 +33,39 @@ html {
   box-sizing: border-box;
 }
 
-*{
-  margin:0; 
-  padding:0;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
 }
-ul, li, ol{
-  list-style:none;
-}
-a{
-  text-decoration:none;
-  color:inherit;
-}
-a:hover{
 
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3b8070;
+  color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
 }
-em,i{
-  font-style: normal;
+
+.button--green:hover {
+  color: #fff;
+  background-color: #3b8070;
+}
+
+.button--grey {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #35495e;
+  color: #35495e;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--grey:hover {
+  color: #fff;
+  background-color: #35495e;
 }
 </style>
